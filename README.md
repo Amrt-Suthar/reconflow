@@ -42,4 +42,7 @@ chmod +x reconflow.sh
 
 ```
 
+## Legal notice 
+
+Use ReconFlow only on systems you own or have explicit authorization to test. Users are responsible for complying with applicable laws and program rules. Automated findings require manual validation
 
