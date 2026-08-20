@@ -1,0 +1,25 @@
+# ReconFlow generated output
+runs/
+results/
+logs/
+*.log
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Local scope data
+targets.txt
+scope.txt
+authorized-scope.txt
+
+# Editors and operating systems
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
