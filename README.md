@@ -26,19 +26,28 @@ ReconFlow — Map the unseen. Hunt the surface. A stealthy, scope-aware recon pi
 
 ## Usage
 ```bash
-chmod +x reconflow.sh
-./reconflow.sh --domain example.com --authorized
+## Basic passive reconnaissance:
+./bug_bounty_recon.sh --domain example.com --authorized
 
-**Active crawling** :
-./reconflow.sh --domain example.com --authorized --active \
-  --rate-limit 5 --threads 10
+## Save results under a custom directory: 
+./bug_bounty_recon.sh -d example.com --authorized -o ./results
 
-**Restricted Nuclei checks** :
-./reconflow.sh --domain example.com --authorized --active --nuclei \
-  --rate-limit 5 --threads 10
+## Active crawling with conservative limits: 
+./bug_bounty_recon.sh -d example.com --authorized \
+--active --rate-limit 5 --threads 10 --timeout 15
 
-**Resume latest run**:
-./reconflow.sh --domain example.com --authorized --resume
+## Active scan with restricted nuclei checks:
+./bug_bounty_recon.sh -d example.com --authorized \
+--active --nuclei --rate-limit 5 --threads 10
+
+## Resume the target’s latest run:
+./bug_bounty_recon.sh -d example.com --authorized --resume
+
+## Display usage information: 
+./bug_bounty_recon.sh --help
+
+## Display version:
+./bug_bounty_recon.sh --version
 
 ```
 
